@@ -1,4 +1,7 @@
-// MODULO
+
+/*
+ ? MODULOS TIPOS BASICOS Y CONCEPTOS GENERALES
+ */
 
 const name: string = 'Brenda';
 let hpPoints: number | string = 95;

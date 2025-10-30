@@ -1,3 +1,7 @@
+/*
+? IMPORT Y EXPORT
+*/
+
 import { taxCalculation, type Product } from './06-function-destructuring';
 
 

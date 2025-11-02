@@ -27,8 +27,13 @@ export class SuperClass{
     }
 }
 
+/* 
+* Una definicion de la clase 
+*/
+console.log(SuperClass);
 
-console.log(SuperClass)
-
-const myClass = new SuperClass();
+/*
+* La instancia de la clase
+*/
+const myClass = new SuperClass(); 
 console.log(myClass);

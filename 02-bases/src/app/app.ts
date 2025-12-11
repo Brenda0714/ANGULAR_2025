@@ -8,5 +8,12 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css'
 })
 export class App {
+ngOnInit() {
+  setInterval(() => {
+    const pink = document.querySelector('.page::before');
+    const peach = document.querySelector('.page::after');
+  }, 0.5);
+}
+
   protected readonly title = signal('Brenda Cavazos');
 }

@@ -1,0 +1,216 @@
+
+
+.page {
+  min-height: calc(100vh - 60px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+
+/* Tarjeta del counter */
+.card {
+  background: #ffffff;
+  padding: 24px 28px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.alert-card {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 16px 22px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  text-align: center;
+  width: 280px;
+  opacity: 0;
+  animation: fadeInOut 3s ease-in-out forwards; /* 🔥 animación completa */
+  z-index: 20;
+}
+
+.alert-card h3 {
+  font-family: 'Inter', sans-serif;
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #7a00b3;
+}
+
+.alert-card p {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  font-size: 14px;
+  color: #444;
+}
+
+/* ✨ Animación suave */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+  15% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+}
+
+/* Título */
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  color: #222;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+.counter-box {
+  text-align: center;   /* ⭐ SOLO centra el título y número */
+}
+
+/* Valor grande del counter */
+.counter-value {
+  font-family: 'Inter', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #8a00b3;
+  margin: 10px 0 0;
+}
+
+/* Separador */
+hr {
+  border: none;
+  height: 1px;
+  background: #e5e5e5;
+  margin: 20px 0;
+}
+
+/* Contenedor de botones */
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Botones */
+button {
+  padding: 10px 18px;
+  min-width: 90px;
+  color: white;
+  background: linear-gradient(135deg, #c200de, #8a00b3);
+  border-radius: 999px; /* pills redonditos */
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(194, 0, 222, 0.35);
+}
+
+/* Hover */
+button:hover {
+  background: linear-gradient(135deg, #8084ee, #c100ff);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 71, 242, 0.4);
+}
+
+/* Click */
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+
+/* Estilo base para las imágenes decorativas */
+.side-img {
+  position: absolute;
+  width: 220px;               /* ajusta tamaño según tu diseño */
+  opacity: 0.9;
+  pointer-events: none;       /* que no estorben clics */
+  z-index: 5;
+  animation: floatY 8s ease-in-out infinite alternate;
+}
+
+/* Imagen izquierda */
+.side-img--left {
+  left: -40px;                /* se mete un poquito fuera del viewport */
+  bottom: 10%;
+}
+
+/* Imagen derecha */
+.side-img--right {
+  right: -40px;
+  top: 12%;
+  animation-delay: 1.5s;      /* para que no se muevan igual */
+}
+
+/* Animación suave de flotación vertical */
+@keyframes floatY {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+  100% {
+    transform: translateY(8px);
+  }
+}
+
+/* 🔥 RESPONSIVE para pantallas pequeñas */
+@media (max-width: 600px) {
+  .card {
+    padding: 20px 18px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .counter-value {
+    font-size: 32px;
+  }
+}

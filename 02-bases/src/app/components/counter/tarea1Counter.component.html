@@ -1,0 +1,39 @@
+<div class="page">
+
+  @if (showMessage) {
+    <div class="alert-card">
+    <h3>🎉 ¡Llegaste a 10!</h3>
+    <p>FELICIDADES ✨</p>
+  </div>
+  }
+
+  @if (showMessage2) {
+    <div class="alert-card">
+    <h3>🎉 ¡Llegaste a -10!</h3>
+    <p>FELICIDADES ✨</p>
+  </div>
+  }
+
+  <!-- Imagen izquierda decorativa -->
+  <img src="/assets/img/shiba1_new.png" alt="izquierda" class="side-img side-img--left">
+
+  <!-- Imagen derecha decorativa -->
+  <img src="/assets/img/shiba2_new.png" alt="derecha" class="side-img side-img--right">
+
+  <div class="card">
+
+    <div class="counter-box">
+      <h1>Counter</h1>
+      <p class="counter-value">{{ counter }}</p>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <button (click)="increaseBy(1)" [disabled]="isBlocked">+1</button>
+      <button (click)="decreaseBy(1)" [disabled]="isBlocked">-1</button>
+      <button (click)="resetCounter()"[disabled]="isBlocked">Reset</button>
+    </div>
+
+  </div>
+</div>

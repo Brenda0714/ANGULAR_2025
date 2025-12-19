@@ -14,11 +14,6 @@
   </div>
   }
 
-  <!-- Imagen izquierda decorativa -->
-  <img src="assets/img/shiba1_new.png" alt="izquierda" style="width: 300px; height: auto; border: 2px solid white;">
-
-  <!-- Imagen derecha decorativa -->
-  <img src="./assets/img/shiba2_new.png" alt="derecha" style="width: 300px; height: auto; border: 2px solid white;">
 
   <div class="card">
 
@@ -28,6 +23,8 @@
     </div>
 
     <hr>
+
+    <h1>Counter Signal: {{ counterSignal() }}</h1>
 
     <div class="row">
       <button (click)="increaseBy(1)" [disabled]="isBlocked">+1</button>

@@ -26,7 +26,7 @@ showMessage2: boolean = false;
     setInterval(() => {
       // this.counter += 1;
       // this.counterSignal.update((v) => v + 1)
-      this.increaseBy(1);
+      //this.increaseBy(1);
     }, 2000);
   }
 
@@ -46,11 +46,12 @@ showMessage2: boolean = false;
 
       setTimeout(() => {
       this.showMessage = false;
-      this.isBlocked = false;
+      this.isBlocked = false;   
+      this.counter = 0;    
+      this.counterSignal.set(0);      
     }, 3000);
 
-    this.counter = 0;
-    this.counterSignal.set(0);
+
     }
 
 

@@ -24,7 +24,7 @@ export class DragonballPageComponent {
 
   powerClasses = computed(() => {
     return {
-      'text-danger': true,
+      'text-primary': true,
     }
   })
 

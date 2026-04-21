@@ -9,7 +9,7 @@ interface Character {
 
 @Component({
   selector: 'app-dragonball-page.component',
-  imports: [NgClass],
+  imports: [],
   templateUrl: './dragonball-page.component.html',
   styleUrl: './dragonball-page.component.scss',
 })

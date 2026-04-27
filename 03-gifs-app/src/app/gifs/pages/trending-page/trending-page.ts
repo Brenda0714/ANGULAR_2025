@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import GifList from "../../components/gif-list/gif-list";
+import { GifService } from '../../services/gifs.service';
 
 
 const imageUrls: string[] = [
@@ -26,4 +27,6 @@ const imageUrls: string[] = [
 export default class TrendingPage {
 
   gifs_img = signal(imageUrls);
+
+  GifService = inject(GifService)
 }

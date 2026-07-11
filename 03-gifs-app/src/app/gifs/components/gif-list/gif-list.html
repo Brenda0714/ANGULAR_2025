@@ -1,7 +1,7 @@
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 w-full">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-6 w-full">
 
   @for (gif of gifs(); track gif) {
-  <gif-list-item [imageUrl]="gif" class="w-full" />
+  <gif-list-item [imageUrl]="gif.url" class="block w-full" />
   }
 
 </div>

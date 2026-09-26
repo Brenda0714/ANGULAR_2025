@@ -20,7 +20,7 @@ import { GifService } from '../../services/gifs.service';
 
 @Component({
   selector: 'app-trending-page',
-  imports: [GifList],
+  //imports: [GifList],
   templateUrl: './trending-page.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

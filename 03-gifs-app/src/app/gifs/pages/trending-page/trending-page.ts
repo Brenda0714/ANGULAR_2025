@@ -22,20 +22,22 @@ export default class TrendingPage {
   // }
 
   onScroll(event: Event) {
-    console.log('--- EVENTO DISPARADO ---');
+
     const scrollDiv = this.scrollDivRef()?.nativeElement;
-    console.log('scrollDiv existe:', !!scrollDiv);
+
     if (!scrollDiv) return;
 
     const ScrollTop = scrollDiv.scrollTop;
     const ClientHeight = scrollDiv.clientHeight;
     const ScrollHeight = scrollDiv.scrollHeight;
 
-    console.log({ ScrollTop, ClientHeight, ScrollHeight });
+
 
     const isAtBottom = ScrollTop + ClientHeight + 300 >= ScrollHeight;
 
-    console.log({ isAtBottom });
+    if (isAtBottom) {
+      this.GifService.loadTrendingGifs();
+    }
   }
 
 }
